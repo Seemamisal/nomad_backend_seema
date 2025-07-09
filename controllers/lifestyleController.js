@@ -1,13 +1,14 @@
 const pool = require('../db');
 
 exports.getLifestyleData = async (req, res) => {
-  const { city } = req.query;
+const { country } = req.query;
 
   try {
-    const result = await pool.query(
-      'SELECT * FROM cities WHERE LOWER(city) = LOWER($1)',
-      [city]
-    );
+ const result = await pool.query(
+  'SELECT * FROM countries WHERE LOWER(country) = LOWER($1)',
+  [country]
+);
+
 
     if (result.rows.length === 0) {
       return res.status(404).json({ error: 'City not found' });
