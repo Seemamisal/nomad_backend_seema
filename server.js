@@ -7,7 +7,6 @@ const forecastRoutes = require('./routes/forecastRoutes');
 
 const app = express();
 
-// Enable CORS (Important for frontend-backend connection)
 app.use(cors({
   origin: '*', // तुम्ही frontend domain specific करू शकता production साठी
   methods: ['GET', 'POST'],
