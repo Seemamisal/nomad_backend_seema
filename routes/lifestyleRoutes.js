@@ -3,10 +3,8 @@ const router = express.Router();
 const { getLifestyleData } = require('../controllers/lifestyleController');
 const pool = require('../db');
 
-// Existing lifestyle route
 router.get('/lifestyle', getLifestyleData);
 
-// ✅ New lifestyle-meter route
 router.get('/lifestyle-meter', async (req, res) => {
   const { country } = req.query;
 

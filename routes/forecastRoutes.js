@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../db'); // Already set up in your project
+const pool = require('../db'); 
 
 router.get('/forecast', async (req, res) => {
   try {
